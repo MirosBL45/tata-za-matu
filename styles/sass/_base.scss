@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+    --lightPurple: #B1B3EA;
+    --darkPurple: #5854A3;
+    --lightGreen: #DAF1E8;
+    // --darkGreen: #6B9BA1;
+    --darkGreen: hsl(150, 70%, 30%);
+    --darkGreenH: hsl(150, 60%, 65%);
+    --lightCream1: #E9E9E9;
+    --lightCream2: #E0A890;
+    --lightCream3: #F9F7F3;
+    --lightCream4: #EDDEA4;
+    --lightCream5: #FFFBDB;
+    --headlineFont: 'Eczar', serif;
+    --textFont: 'Raleway', sans-serif;
+    --4xlText: 1.5rem;
+    --3xlText: 1.375rem;
+    --xxlText: 1.25rem;
+    --xlText: 1.125rem;
+    --largeText: 1rem;
+    --bigText: 0.875rem;
+    --mediumText: 0.75rem;
+    --smallText: 0.625rem;
+    --time: 0.23s;
+}
+
+.darkMode {
+    --lightPurple: #f1ba66;
+    --darkPurple: #3D3738;
+    --lightGreen: #AF735B;
+    --darkGreen: #404040;
+    --lightCream1: #D0B5B1;
+    --lightCream2: #6E4526;
+    --lightCream3: #645B56;
+    --lightCream4: #b4986b;
+    --lightCream5: #7B6966;
+}
+
+body {
+    font-family: var(--textFont);
+    background: var(--lightCream2);
+}
+
+body.darkMode {
+    transition: all 0.23s linear;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.masterContainer {
+    max-width: 1580px;
+    margin: 0 auto;
+}

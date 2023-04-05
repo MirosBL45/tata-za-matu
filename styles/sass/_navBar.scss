@@ -1,0 +1,124 @@
+.navMain {
+    background: var(--lightGreen);
+    font-size: var(--xxlText);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navinks {
+    display: flex;
+
+    a {
+        display: inline-block;
+        margin-right: 6rem;
+        color: var(--darkGreen);
+        font-weight: 600;
+        transition: all var(--time);
+
+        &:hover {
+            color: var(--darkGreenH);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+.lineHover {
+    margin: 1px auto 0;
+    height: 2px;
+    background: var(--darkGreenH);
+    width: 0%;
+    transition: var(--time);
+}
+
+.navLink {
+    display: inline-block;
+
+    &:hover {
+        color: var(--darkGreenH);
+        transform: translateY(-3.5px);
+    }
+
+    &:hover .lineHover {
+        width: 97%;
+    }
+}
+
+.lngTheme,
+.lng {
+    display: flex;
+}
+
+.lng {
+    position: relative;
+    margin-right: 2rem;
+    cursor: pointer;
+
+    span {
+        font-weight: 600;
+        color: var(--darkGreen);
+    }
+
+    .arrow {
+        transition: var(--time);
+        fill: var(--darkGreen);
+        margin: 0 3px;
+    }
+
+    &:hover .arrow {
+        transform: rotate(90deg);
+    }
+
+    &:hover .choose_language {
+        opacity: 1;
+    }
+}
+
+.choose_language {
+    background: var(--lightGreen);
+    border-radius: 5px;
+    width: 75px;
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: var(--time);
+
+    .the_lang {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 2;
+
+        .lang {
+            margin-left: 8px;
+        }
+    }
+}
+
+.theme {
+    font-size: 1.5rem;
+    cursor: pointer;
+    fill: var(--darkGreen);
+}
+
+.planet {
+    path {
+        stroke: var(--darkGreen);
+    }
+}
