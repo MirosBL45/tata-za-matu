@@ -4,6 +4,8 @@ import { HydrationProvider, Server, Client } from 'react-hydration-provider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
+import styles from '@/styles/Navbar.module.css';
+
 import { GrLanguage } from 'react-icons/gr';
 import { AiOutlineRight } from 'react-icons/ai';
 import { MdOutlineDarkMode } from 'react-icons/md';
@@ -79,9 +81,9 @@ function Navbar() {
   return (
     <HydrationProvider>
       <Client>
-        <div className="navMain">
-          <div className="masterContainer">
-            <div className="navContainer">
+        <div className={styles.navMain}>
+          <div className={styles.masterContainer}>
+            <div className={styles.navContainer}>
               <div>
                 <Link href="/">
                   <Image
@@ -92,31 +94,31 @@ function Navbar() {
                   />
                 </Link>
               </div>
-              <div className="navinks">
-                <nav>
-                  <Link className="navLink" href="/">
-                    <div className="linkText">{t('nav1')}</div>
-                    <div className="lineHover"></div>
+              <div className={styles.navinks}>
+                <nav className={styles.navTag}>
+                  <Link className={styles.navLink} href="/">
+                    <div className={styles.linkText}>{t('nav1')}</div>
+                    <div className={styles.lineHover}></div>
                   </Link>
-                  <Link className="navLink" href="/">
-                    <div className="linkText">{t('nav2')}</div>
-                    <div className="lineHover"></div>
+                  <Link className={styles.navLink} href="/">
+                    <div className={styles.linkText}>{t('nav2')}</div>
+                    <div className={styles.lineHover}></div>
                   </Link>
-                  <Link className="navLink" href="/">
-                    <div className="linkText">{t('nav3')}</div>
-                    <div className="lineHover"></div>
+                  <Link className={styles.navLink} href="/">
+                    <div className={styles.linkText}>{t('nav3')}</div>
+                    <div className={styles.lineHover}></div>
                   </Link>
                 </nav>
-                <div className="lngTheme">
-                  <div className="lng">
-                    <GrLanguage className="planet" />
-                    <AiOutlineRight className="arrow" />
+                <div className={styles.lngTheme}>
+                  <div className={styles.lng}>
+                    <GrLanguage className={styles.planet} />
+                    <AiOutlineRight className={styles.arrow} />
                     <span>{t('lang')}</span>
-                    <ul className="choose_language">
+                    <ul className={styles.choose_language}>
                       {router.locales.map((locale) => (
                         <li key={locale}>
                           <Link
-                            className="the_lang"
+                            className={styles.the_lang}
                             onClick={() => {
                               if (locale == 'en') {
                                 i18next.changeLanguage('en');
@@ -129,7 +131,7 @@ function Navbar() {
                           >
                             {locale == 'en' ? 'EN' : 'SR'}
                             <Image
-                              className="lang"
+                              className={styles.lang}
                               width={23}
                               height={23}
                               src={
@@ -144,9 +146,9 @@ function Navbar() {
                   </div>
                   <div onClick={onDarkLight}>
                     {light ? (
-                      <MdOutlineDarkMode className="theme" />
+                      <MdOutlineDarkMode className={styles.theme} />
                     ) : (
-                      <ImSun className="theme" />
+                      <ImSun className={styles.theme} />
                     )}
                   </div>
                 </div>

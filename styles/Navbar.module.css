@@ -1,77 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Raleway:wght@200;300;400;500;600;700&display=swap");
-:root {
-  --lightPurple: #B1B3EA;
-  --darkPurple: #5854A3;
-  --lightGreen: #DAF1E8;
-  --darkGreen: hsl(150, 70%, 30%);
-  --darkGreenH: hsl(150, 60%, 65%);
-  --lightCream1: #E9E9E9;
-  --lightCream2: #E0A890;
-  --lightCream3: #F9F7F3;
-  --lightCream4: #EDDEA4;
-  --lightCream5: #FFFBDB;
-  --headlineFont: "Eczar", serif;
-  --textFont: "Raleway", sans-serif;
-  --xl4Text: 1.5rem;
-  --xl3Text: 1.375rem;
-  --xxlText: 1.25rem;
-  --xlText: 1.125rem;
-  --largeText: 1rem;
-  --bigText: 0.875rem;
-  --mediumText: 0.75rem;
-  --smallText: 0.625rem;
-  --time: 0.23s;
+.navMain {
+  background: var(--lightGreen);
+  font-size: var(--xxlText);
 }
 
-.darkMode {
-  --lightPurple: #f1ba66;
-  --darkPurple: #3D3738;
-  --lightGreen: #AF735B;
-  --darkGreen: #404040;
-  --lightCream1: #D0B5B1;
-  --lightCream2: #6E4526;
-  --lightCream3: #645B56;
-  --lightCream4: #b4986b;
-  --lightCream5: #7B6966;
-}
-
-body {
-  font-family: var(--textFont);
-  background: var(--lightCream2);
-}
-
-body.darkMode {
-  transition: all 0.23s linear;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-}
-
-img {
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
+.navTag {
+  display: flex;
+  align-items: center;
+  margin-right: 10rem;
 }
 
 .masterContainer {
   max-width: 1580px;
   margin: 0 auto;
-}
-
-.navMain {
-  background: var(--lightGreen);
-  font-size: var(--xxlText);
 }
 
 .navContainer {
@@ -84,6 +24,7 @@ a {
 .navinks {
   display: flex;
 }
+
 .navinks a {
   display: inline-block;
   margin-right: 6rem;
@@ -91,17 +32,13 @@ a {
   font-weight: 600;
   transition: all var(--time);
 }
+
 .navinks a:hover {
   color: var(--darkGreenH);
 }
+
 .navinks a:last-child {
   margin-right: 0;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  margin-right: 10rem;
 }
 
 .lineHover {
@@ -115,17 +52,19 @@ nav {
 .navLink {
   display: inline-block;
 }
+
 .navLink:hover {
   color: var(--darkGreenH);
   transform: translateY(-3.5px);
 }
+
 .navLink:hover .lineHover {
   width: 97%;
 }
 
 .lngTheme,
 .lng {
-  display: flex;
+    display: flex;
 }
 
 .lng {
@@ -160,6 +99,7 @@ nav {
   z-index: 1;
   transition: var(--time);
 }
+
 .choose_language .the_lang {
   padding: 0.5rem;
   display: flex;
