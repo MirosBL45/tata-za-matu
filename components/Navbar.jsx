@@ -84,7 +84,7 @@ function Navbar() {
         <div className={styles.navMain}>
           <div className={styles.masterContainer}>
             <div className={styles.navContainer}>
-              <div>
+              <div className={styles.logo}>
                 <Link href="/">
                   <Image
                     src="/logoBioetera.png"
