@@ -10,4 +10,8 @@ App will be in 2 languages, Serbian and English. Localization is used in hygraph
 
 Style is going to be done with modules-css.
 
+After clone:
+1) npm install
+2) npm run dev
+
 Any advice is wellcome :)
