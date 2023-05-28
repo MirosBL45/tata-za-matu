@@ -64,7 +64,7 @@
 
 .lngTheme,
 .lng {
-    display: flex;
+  display: flex;
 }
 
 .lng {
@@ -72,18 +72,22 @@
   margin-right: 2rem;
   cursor: pointer;
 }
+
 .lng span {
   font-weight: 600;
   color: var(--darkGreen);
 }
+
 .lng .arrow {
   transition: var(--time);
   fill: var(--darkGreen);
   margin: 0 3px;
 }
+
 .lng:hover .arrow {
   transform: rotate(90deg);
 }
+
 .lng:hover .choose_language {
   opacity: 1;
 }
@@ -107,6 +111,7 @@
   justify-content: space-around;
   opacity: 2;
 }
+
 .choose_language .the_lang .lang {
   margin-left: 8px;
 }
@@ -122,7 +127,7 @@
 }
 
 .logo {
-   border: 2px solid red;
+  border: 2px solid red;
 }
 
 @media only screen and (max-width: 1095px) {
@@ -132,7 +137,6 @@
     flex-direction: column;
     /* transform: translate(-1200px); */
   }
-
   .navTag {
     /* flex-direction: column; */
     flex-direction: row;
@@ -140,13 +144,11 @@
     justify-content: center;
     align-items: center;
   }
-
   .navinks a {
     margin-right: 3rem;
   }
-
   .lngTheme {
     align-items: center;
     justify-content: center;
-}
+  }
 }

@@ -1,0 +1,17 @@
+.landingMain {
+  background: var(--lightCream4);
+  font-size: var(--xl4Text);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.landingContainer {
+  padding: 20px;
+}
+
+.mainHeadline {
+  text-align: center;
+  color: var(--darkPurple);
+  max-width: 70%;
+  margin: 0 auto;
+}

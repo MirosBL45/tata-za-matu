@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
+// import styles from '@/styles/Home.module.css'
 
 import { useRouter } from 'next/router';
 import graphCmsClient from '../lib/graphCmsClient';
@@ -69,7 +69,8 @@ export default function Home({ zalices }) {
       <HydrationProvider>
         <Navbar />
         <LandingPage />
-        <main className={styles.main}>
+        {/* <main className={styles.main}> */}
+        <main>
           {/* <Server> */}
           <div>
             {zalices.map((product) => (

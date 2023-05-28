@@ -4,7 +4,7 @@ import { HydrationProvider, Server, Client } from 'react-hydration-provider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import styles from '@/styles/Navbar.module.css';
+import styles from '@/css/Navbar.module.css';
 
 import { GrLanguage } from 'react-icons/gr';
 import { AiOutlineRight } from 'react-icons/ai';
