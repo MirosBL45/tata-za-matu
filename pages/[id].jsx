@@ -1,6 +1,6 @@
 import { gql } from 'graphql-request';
 
-import graphCmsClient from '../lib/graphCmsClient';
+import graphCmsClient from '../library/graphCmsClient';
 
 function ProductPage({ zalice }) {
   return (

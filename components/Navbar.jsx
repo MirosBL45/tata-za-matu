@@ -87,8 +87,8 @@ function Navbar() {
               <div className={styles.logo}>
                 <Link href="/">
                   <Image
-                    src="/logoBioetera.png"
-                    alt="logo"
+                    src="/tatazamatu_logo.svg"
+                    alt="tata za matu logo"
                     width={59}
                     height={72}
                   />
