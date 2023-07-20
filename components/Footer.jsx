@@ -1,13 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {
-  // HydrationContext,
-  HydrationProvider,
-  // useHydrated,
-  Server,
-  Client,
-  // createHydration,
-  // useComponentHydrated,
-} from 'react-hydration-provider';
+import { HydrationProvider, Server, Client } from 'react-hydration-provider';
 
 function Footer() {
   const { t } = useTranslation();
