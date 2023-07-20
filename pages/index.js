@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import graphCmsClient from '../library/graphCmsClient';
 import { GraphQLClient, gql } from 'graphql-request';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer/Footer';
 
 import {
   HydrationContext,
