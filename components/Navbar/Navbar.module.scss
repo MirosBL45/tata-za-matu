@@ -126,10 +126,6 @@
   stroke: var(--darkGreen);
 }
 
-.logo {
-  border: 2px solid red;
-}
-
 @media only screen and (max-width: 1095px) {
   .navinks {
     /* height: 100vh; */
@@ -151,4 +147,8 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+.newTry {
+  padding: 20px;
 }

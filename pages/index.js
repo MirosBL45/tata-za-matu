@@ -1,5 +1,4 @@
 import Head from 'next/head'
-// import styles from '@/styles/Home.module.css'
 
 import { useRouter } from 'next/router';
 import graphCmsClient from '@/library/graphCmsClient';
@@ -16,7 +15,7 @@ import {
   createHydration,
   useComponentHydrated,
 } from "react-hydration-provider";
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 import LandingPage from '@/components/LandingPage/LandingPage';
 
 
