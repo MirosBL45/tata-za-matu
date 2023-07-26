@@ -17,7 +17,7 @@ import {
   useComponentHydrated,
 } from "react-hydration-provider";
 import Navbar from '@/components/Navbar';
-import LandingPage from '@/components/LandingPage';
+import LandingPage from '@/components/LandingPage/LandingPage';
 
 
 const QUERY = gql`

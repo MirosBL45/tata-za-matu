@@ -1,5 +1,7 @@
+'use client'
+
 import { HydrationProvider, Server, Client } from 'react-hydration-provider';
-import styles from '@/css/LandingPage.module.css';
+import styles from './LandingPage.module.css';
 
 import i18n from 'i18next';
 import i18next from 'i18next';
