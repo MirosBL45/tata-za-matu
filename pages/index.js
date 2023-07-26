@@ -1,10 +1,10 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import { useRouter } from 'next/router';
-import graphCmsClient from '@/library/graphCmsClient';
-import { GraphQLClient, gql } from 'graphql-request';
-import Link from 'next/link';
-import Footer from '@/components/Footer/Footer';
+import { useRouter } from "next/router";
+import graphCmsClient from "@/library/graphCmsClient";
+import { GraphQLClient, gql } from "graphql-request";
+import Link from "next/link";
+import Footer from "@/components/Footer/Footer";
 
 import {
   HydrationContext,
@@ -15,31 +15,29 @@ import {
   createHydration,
   useComponentHydrated,
 } from "react-hydration-provider";
-import Navbar from '@/components/Navbar/Navbar';
-import LandingPage from '@/components/LandingPage/LandingPage';
-
+import Navbar from "@/components/Navbar/Navbar";
+import LandingPage from "@/components/LandingPage/LandingPage";
 
 const QUERY = gql`
   query IndexPageQuery($locale: Locale!) {
     zalices(locales: [$locale]) {
       id
-    name
-    slug
-    description {
-      html
-    }
-    images {
-      height
-      url
-    }
-    coverPhoto {
-      height
-      url
-    }
+      name
+      slug
+      description {
+        html
+      }
+      images {
+        height
+        url
+      }
+      coverPhoto {
+        height
+        url
+      }
     }
   }
 `;
-
 
 export async function getStaticProps({ locale }) {
   const { zalices } = await graphCmsClient.request(QUERY, { locale });
@@ -49,7 +47,7 @@ export async function getStaticProps({ locale }) {
       zalices,
     },
     revalidate: 30,
-  }
+  };
 }
 
 export default function Home({ zalices }) {
@@ -63,27 +61,33 @@ export default function Home({ zalices }) {
         <meta name="description" content="Tata za matu | Matematika za sve" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/tatazamatu_logo.svg" />
-        <link rel="shortcut icon" href="/tatazamatu_logo.svg" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="/tatazamatu_logo.svg"
+          type="image/x-icon"
+        />
       </Head>
       <HydrationProvider>
         <Navbar />
         <LandingPage />
-        {/* <main className={styles.main}> */}
         <main>
-          {/* <Server> */}
           <div>
             {zalices.map((product) => (
-              <div key={product.id}>
-                <Link href={product.id} locale={router.locale}>
+              <div key={`${product.slug}`}>
+                <Link href={`/posts/${product.slug}`} locale={router.locale}>
                   <h1>{product.name}</h1>
                 </Link>
               </div>
+              // <div key={product.id}>
+              //   <Link href={product.id} locale={router.locale}>
+              //     <h1>{product.name}</h1>
+              //   </Link>
+              // </div>
             ))}
           </div>
-          {/* </Server> */}
         </main>
         <Footer />
       </HydrationProvider>
     </>
-  )
+  );
 }
