@@ -72,17 +72,17 @@ export default function Home({ zalices }) {
         <LandingPage />
         <main>
           <div>
-            {zalices.map((product) => (
-              <div key={`${product.slug}`}>
-                <Link href={`/posts/${product.slug}`} locale={router.locale}>
-                  <h1>{product.name}</h1>
-                </Link>
-              </div>
-              // <div key={product.id}>
-              //   <Link href={product.id} locale={router.locale}>
+            {zalices.map((product, index) => (
+              // <div key={index}>
+              //   <Link href={`/posts/${product.slug}`} locale={router.locale}>
               //     <h1>{product.name}</h1>
               //   </Link>
               // </div>
+              <div key={product.id}>
+                <Link href={product.id} locale={router.locale}>
+                  <h1>{product.name}</h1>
+                </Link>
+              </div>
             ))}
           </div>
         </main>
